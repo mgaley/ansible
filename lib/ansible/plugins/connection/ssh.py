@@ -60,6 +60,8 @@ class Connection(ConnectionBase):
     # put_file, and fetch_file methods, so we don't need to do any connection
     # management here.
 
+#https://github.com/ansible/ansible/issues/13278#issuecomment-159254725
+    _connected = False
     def _connect(self):
         return self
 
